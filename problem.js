@@ -2,7 +2,7 @@ function calculateMoney(ticketSale) {
     const perTicketPrice = 120;
     const securityGuardCost = 500;
     const totalStuffLunchCost = 50 * 8;
-    if (ticketSale > 0) {
+    if (ticketSale => 0) {
         const totalPerDayCost = securityGuardCost + totalStuffLunchCost;
         const totalRevenue = ticketSale * perTicketPrice;
         const totalIncome = totalRevenue - totalPerDayCost;
@@ -12,6 +12,7 @@ function calculateMoney(ticketSale) {
         return 'Invalid Number'
     }
 }
+console.log(calculateMoney(0));
 
 
 function checkName(name) {
@@ -52,7 +53,6 @@ function deleteInvalids(array) {
 
 
 function password(obj) {
-
     if (obj.name && obj.birthYear && obj.siteName && obj.birthYear.toString().length === 4) {
         const site = obj.siteName;
         const si = site.slice(0, 1).toUpperCase().concat(site.slice(1, site.length))
@@ -72,14 +72,14 @@ function monthlySavings(arr, livingCost) {
         let totalTax = 0;
         for (let payment of arr) {
             totalIncome += payment;
-            if (payment > 3000) {
+            if (payment >= 3000) {
                 let tax = payment * 20 / 100;
                 totalTax += tax;
             }
         }
         const totalCost = livingCost + totalTax;
         const totalSavings = totalIncome - totalCost;
-        if (totalSavings > 0) {
+        if (totalSavings >= 0) {
             return totalSavings;
         }
         else {

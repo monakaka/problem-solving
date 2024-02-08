@@ -109,7 +109,7 @@ function monthlySavings(arr, livingCost) {
     }
 }
 
-const payments = [900, 2700, 3400];
-const livingCost = 10000;
+const payments = [1000, 2000, 3000];
+const livingCost = 5400;
 const result = monthlySavings(payments, livingCost)
 console.log(result);
