@@ -2,7 +2,7 @@ function calculateMoney(ticketSale) {
     const perTicketPrice = 120;
     const securityGuardCost = 500;
     const totalStuffLunchCost = 50 * 8;
-    if (ticketSale => 0) {
+    if (ticketSale >= 0) {
         const totalPerDayCost = securityGuardCost + totalStuffLunchCost;
         const totalRevenue = ticketSale * perTicketPrice;
         const totalIncome = totalRevenue - totalPerDayCost;
@@ -12,7 +12,6 @@ function calculateMoney(ticketSale) {
         return 'Invalid Number'
     }
 }
-console.log(calculateMoney(0));
 
 
 function checkName(name) {
